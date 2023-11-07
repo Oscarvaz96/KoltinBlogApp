@@ -13,7 +13,12 @@ The User(Author) can create posts, and comments inside the posts.
         -Services
     Persistence
         -Models
-        -Database (migrations)
+        -Database (migrations, seeder and factories)
+
+## Seeder
+If you want to generate random data and test endpoints where you can check the data, just run
+php artisan db:seed 
+I created a factory for each model (User, Post and Comment) and a DB Seeder where this 3 models are generated and related.
 
 ## Routes
 
