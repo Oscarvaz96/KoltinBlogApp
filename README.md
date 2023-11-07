@@ -3,6 +3,14 @@
 This is an API that allows user to be registered and login.
 The User(Author) can create posts, and comments inside the posts.
 
+Tools used:
+    -Composer
+    -Laravel 9.x
+    -PHP 8.0.x
+    -Php Intelephense
+    -XDebugger 3
+    -XAMPP
+
 ## Application layers
     HTTP
         -Controllers
