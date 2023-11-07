@@ -31,14 +31,16 @@ Route::prefix('posts')->group(function () {
     Route::get('/all', [PostController::class,'index']);
     Route::get('/{post}', [PostController::class,'show']);
     Route::get('/{post}/comments', [CommentController::class,'index']);
+   
 });
+
+Route::get('/authors', [AuthorController::class,'index']);
 
 Route::group(['middleware' => ['auth:api']], function () {
     Route::post('/logout', [AuthController::class,'logout']);
     Route::get('/me', [AuthController::class,'me']);
     Route::post('/post', [PostController::class,'store']);
     Route::post('/posts/{post}/comment', [CommentController::class,'store']);
-    Route::get('/authors', [AuthorController::class,'index']);
 });
 
 
